@@ -1,0 +1,40 @@
+{
+  "name": "@thzero/library_client_svelte",
+  "version": "0.14.0",
+  "version_major": 0,
+  "version_minor": 14,
+  "version_patch": 0,
+  "version_date": "09/07/2021",
+  "description": "An opinionated library of common functionality to bootstrap a Svelte based SPA application.",
+  "author": "thZero",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thzero/library_client_svelte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thzero/library_client_svelte/issues"
+  },
+  "homepage": "https://github.com/thzero/library_client_svelte#readme",
+  "scripts": {
+    "cli-update": "./node_modules/.bin/library-cli --updateversion --pi",
+    "cli-update-w": ".\\node_modules\\.bin\\library-cli --updateversion --pi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@thzero/library_common": "^0.13.19",
+    "@thzero/library_client": "^0.14",
+    "async-mutex": "^0.3.2",
+    "mitt": "^3.0.0",
+    "svelte-i18n": "^3.3.10"
+  },
+  "devDependencies": {
+    "@thzero/library_cli": "^0.13.17"
+  },
+  "peerDependencies": {
+    "@alienfast/i18next-loader": "^1.1.4",
+    "@mdi/font": "^5.9.55",
+    "material-design-icons-iconfont": "^6.1.0",
+    "svelte": "^3"
+  }
+}
