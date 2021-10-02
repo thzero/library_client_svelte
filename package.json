@@ -26,10 +26,10 @@
     "@thzero/library_client": "^0.14",
     "async-mutex": "^0.3.2",
     "mitt": "^3.0.0",
-    "svelte-i18n": "^3.3.10"
+    "svelte-i18n": "^3.3.12"
   },
   "devDependencies": {
-    "@thzero/library_cli": "^0.13.18"
+    "@thzero/library_cli": "^0.13.19"
   },
   "peerDependencies": {
     "@alienfast/i18next-loader": "^1",
