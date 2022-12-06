@@ -21,16 +21,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@thzero/library_client": "^0.15",
-    "@thzero/library_common": "^0.15",
-    "async-mutex": "^0.3.2",
+    "@thzero/library_client": "^0.16",
+    "@thzero/library_common": "^0.16",
     "mitt": "^3.0.0",
-    "svelte-i18n": "^3.4.0"
+    "svelte-i18n": "^3.6.0"
   },
   "peerDependencies": {
-    "@alienfast/i18next-loader": "^1",
-    "@mdi/font": "^6",
-    "material-design-icons-iconfont": "^6",
     "svelte": "^3"
   }
 }
