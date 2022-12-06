@@ -59,7 +59,7 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 
 	if (!starter) {
 		if (app)
-			new app({ target: document.body });
+			new app({ target: document.getElementById('app') });
 		return;
 	}
 
@@ -73,7 +73,7 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 			// eslint-disable-next-line
 			.then(values => {
 				if (app)
-					new app({ target: document.body });
+					new app({ target: document.getElementById('app') });
 			})
 			.catch(err => {
 				// eslint-disable-next-line
