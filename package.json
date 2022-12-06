@@ -1,10 +1,10 @@
 {
   "name": "@thzero/library_client_svelte",
-  "version": "0.15.6",
+  "version": "0.15.7",
   "version_major": 0,
   "version_minor": 15,
-  "version_patch": 6,
-  "version_date": "11/25/2022",
+  "version_patch": 7,
+  "version_date": "12/06/2022",
   "description": "An opinionated library of common functionality to bootstrap a Svelte based SPA application.",
   "author": "thZero",
   "license": "MIT",
