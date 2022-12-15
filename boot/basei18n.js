@@ -1,4 +1,4 @@
-import { init, getLocaleFromNavigator, register, _, t, addMessages } from 'svelte-i18n';
+import { init, getLocaleFromNavigator, register, format, addMessages, unwrapFunctionStore } from 'svelte-i18n';
 
 import GlobalUtility from '@thzero/library_client/utility/global';
 
@@ -8,14 +8,14 @@ import NotImplementedError from '@thzero/library_common/errors/notImplemented';
 
 class SvelteBasei18n extends Basei18n {
 	// eslint-disable-next-line
-	async execute(framework, app, router, store) {
+	async execute(framework, app, store) {
 		this._initMessages(register, addMessages);
 
 		init({
 			fallbackLocale: 'en',
 			initialLocale: getLocaleFromNavigator()
 		});
-		GlobalUtility.$trans = { t: _ };
+		GlobalUtility.$trans = { t: unwrapFunctionStore(format) };
 	}
 
 	_initMessages(register) {

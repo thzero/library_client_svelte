@@ -1,6 +1,6 @@
 class BaseValidate {
 	// eslint-disable-next-line
-	async execute(Vue, app, router) {
+	async execute(framework, app, store) {
 // 		extend('decimal', {
 // 			validate: (value, { decimals = '*', separator = '.' } = {}) => {
 // 				if (value === null || value === undefined || value === '') {
