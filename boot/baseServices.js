@@ -13,19 +13,19 @@ class SvelteBaseServices extends BaseServices {
 	}
 
 	_initializeEvent(injector) {
-		return new eventService(injector);
+		return new eventService();
 	}
 
 	_initializeRouter(injector) {
-		return new routerService(injector);
+		return new routerService();
 	}
 
 	_initializeStore(injector) {
-		return new storeService(injector);
+		return new storeService();
 	}
 
 	_initializeTranslate(injector) {
-		return new translateService(injector);
+		return new translateService();
 	}
 }
 

@@ -1,9 +1,10 @@
 import GlobalUtility from '@thzero/library_client/utility/global';
 
+// @ts-ignore
 import {} from '@thzero/library_common/utility/string';
 
 // eslint-disable-next-line
-async function start(app, router, storeRequest, bootFiles, starter) {
+async function start(app, storeRequest, bootFiles, starter) {
 	let store = null;
 	if (storeRequest) {
 		try {
@@ -18,8 +19,6 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 	if (!store)
 		throw Error('Unable to create store.');
 	GlobalUtility.$store = store;
-	
-	GlobalUtility.$navRouter = router;
 
 	if (bootFiles && (bootFiles.length > 0)) {
 		let obj;
@@ -30,7 +29,6 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 			try {
 				try {
 					await bootFile({
-						router,
 						store
 					});
 					continue;
@@ -38,7 +36,6 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 				catch (err) {
 					obj = new bootFile();
 					await obj.execute(
-						router,
 						store
 					);
 					continue;
@@ -65,7 +62,6 @@ async function start(app, router, storeRequest, bootFiles, starter) {
 
 	try {
 		const result = starter({
-			router,
 			store
 		});
 
