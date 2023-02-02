@@ -1,9 +1,9 @@
 import mitt from 'mitt';
 
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 const EventBus = mitt();
 
 export default async () => {
-	GlobalUtility.$EventBus = EventBus;
+	LibraryClientUtility.$EventBus = EventBus;
 };

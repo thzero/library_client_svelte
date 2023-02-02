@@ -1,10 +1,10 @@
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 import Service from '@thzero/library_client/service/index';
 
 class SvelteStoreService extends Service {
 	get store() {
-		return GlobalUtility.$store;
+		return LibraryClientUtility.$store;
 	}
 }
 

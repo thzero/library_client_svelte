@@ -1,4 +1,4 @@
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 import BaseServices from '@thzero/library_client/boot/baseServices';
 
@@ -9,7 +9,7 @@ import translateService from '../service/translate';
 
 class SvelteBaseServices extends BaseServices {
 	_initializeInjector(framework, injector) {
-		GlobalUtility.$injector = injector;
+		LibraryClientUtility.$injector = injector;
 	}
 
 	_initializeEvent(injector) {

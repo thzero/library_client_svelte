@@ -1,7 +1,7 @@
 import Constants from '../constants';
 import LibraryCommonConstants from '@thzero/library_common/constants';
 
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 class Utility {
 	static applyError(error, messageParams) {
@@ -29,7 +29,7 @@ class Utility {
 				let suffix = param.suffix;
 				if (String.isNullOrEmpty(suffix))
 					suffix = Constants.ErrorCodes.SuffixParams;
-				param.value = GlobalUtility.$trans.t(`${suffix}.${param.value}`);
+				param.value = LibraryClientUtility.$trans.t(`${suffix}.${param.value}`);
 			}
 			messageParams[field] = param.value;
 		}
@@ -38,7 +38,7 @@ class Utility {
 			messageCode = Constants.ErrorCodes.Default;
 
 		return {
-			message: GlobalUtility.$trans.t(`${Constants.ErrorCodes.Suffix}.${messageCode}`, messageParams),
+			message: LibraryClientUtility.$trans.t(`${Constants.ErrorCodes.Suffix}.${messageCode}`, messageParams),
 			field: (error.field ? error.field : LibraryCommonConstants.ErrorFields.Generic)
 		};
 	}
@@ -70,7 +70,7 @@ class Utility {
 			return;
 		}
 
-		GlobalUtility.$navRouter.push('/');
+		LibraryClientUtility.$navRouter.push('/');
 	}
 }
 

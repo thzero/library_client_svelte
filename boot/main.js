@@ -1,4 +1,4 @@
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 // @ts-ignore
 import {} from '@thzero/library_common/utility/string';
@@ -18,7 +18,7 @@ async function start(app, storeRequest, bootFiles, starter) {
 
 	if (!store)
 		throw Error('Unable to create store.');
-	GlobalUtility.$store = store;
+	LibraryClientUtility.$store = store;
 
 	if (bootFiles && (bootFiles.length > 0)) {
 		let obj;
