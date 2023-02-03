@@ -1,6 +1,6 @@
 import { init, getLocaleFromNavigator, register, format, addMessages, unwrapFunctionStore } from 'svelte-i18n';
 
-import GlobalUtility from '@thzero/library_client/utility/global';
+import LibraryClientUtility from '@thzero/library_client/utility/index';
 
 import Basei18n from '@thzero/library_client/boot/basei18n';
 
@@ -15,7 +15,7 @@ class SvelteBasei18n extends Basei18n {
 			fallbackLocale: 'en',
 			initialLocale: getLocaleFromNavigator()
 		});
-		GlobalUtility.$trans = { t: unwrapFunctionStore(format) };
+		LibraryClientUtility.$trans = { t: unwrapFunctionStore(format) };
 	}
 
 	_initMessages(register) {
