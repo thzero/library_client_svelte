@@ -2,11 +2,11 @@ import { init, getLocaleFromNavigator, register, format, addMessages, unwrapFunc
 
 import LibraryClientUtility from '@thzero/library_client/utility/index';
 
-import Basei18n from '@thzero/library_client/boot/basei18n';
+import i18nBaseBoot from '@thzero/library_client/boot/basei18n';
 
 import NotImplementedError from '@thzero/library_common/errors/notImplemented';
 
-class SvelteBasei18n extends Basei18n {
+class Sveltei18nBaseBoot extends i18nBaseBoot {
 	// eslint-disable-next-line
 	async execute(framework, app, store) {
 		this._initMessages(register, addMessages);
@@ -23,4 +23,4 @@ class SvelteBasei18n extends Basei18n {
 	}
 }
 
-export default SvelteBasei18n;
+export default Sveltei18nBaseBoot;

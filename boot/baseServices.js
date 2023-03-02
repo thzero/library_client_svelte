@@ -1,13 +1,13 @@
 import LibraryClientUtility from '@thzero/library_client/utility/index';
 
-import BaseServices from '@thzero/library_client/boot/baseServices';
+import ServicesBaseBoot from '@thzero/library_client/boot/baseServices';
 
 import eventService from '../service/event';
 import routerService from '../service/router';
 import storeService from '../service/store';
 import translateService from '../service/translate';
 
-class SvelteBaseServices extends BaseServices {
+class SvelteServicesBaseBoot extends ServicesBaseBoot {
 	_initializeInjector(framework, injector) {
 		LibraryClientUtility.$injector = injector;
 	}
@@ -29,4 +29,4 @@ class SvelteBaseServices extends BaseServices {
 	}
 }
 
-export default SvelteBaseServices;
+export default SvelteServicesBaseBoot;
