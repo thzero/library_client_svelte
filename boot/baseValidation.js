@@ -1,4 +1,6 @@
-class BaseValidate {
+import BaseBoot from '@thzero/library_client/boot/base';
+
+class ValidateBaseBoot extends BaseBoot {
 	// eslint-disable-next-line
 	async execute(framework, app, store) {
 // 		extend('decimal', {
@@ -51,4 +53,4 @@ class BaseValidate {
 	}
 }
 
-export default BaseValidate;
+export default ValidateBaseBoot;
