@@ -28,6 +28,6 @@
     "svelte-spa-router": "^4.0.0"
   },
   "peerDependencies": {
-    "svelte": "^3"
+    "svelte": "^4"
   }
 }
