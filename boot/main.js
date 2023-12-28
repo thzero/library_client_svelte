@@ -4,11 +4,12 @@ import LibraryClientUtility from '@thzero/library_client/utility/index';
 import {} from '@thzero/library_common/utility/string';
 
 // eslint-disable-next-line
-async function start(app, storeRequest, bootFiles, starter) {
+async function start(app, storeRequest, bootFiles, starter, options) {
 	let store = null;
 	if (storeRequest) {
 		try {
-			store = storeRequest();
+			const temp = new storeRequest();
+			store = temp.initialize();
 		}
 		catch (err) {
 			console.log(err);
@@ -19,6 +20,19 @@ async function start(app, storeRequest, bootFiles, starter) {
 	if (!store)
 		throw Error('Unable to create store.');
 	LibraryClientUtility.$store = store;
+
+	if (options) {
+		if (options.idGenerator) {
+			if (options.idGenerator.override)
+				LibraryCommonUtility.setIdGenerator(options.idGenerator.override);
+			if (options.idGenerator.alphabet)
+				LibraryCommonUtility.setIdGeneratorAlphabet(options.idGenerator.alphabet);
+			if (options.idGenerator.lengthLong)
+				LibraryCommonUtility.setIdGeneratorLengthLong(options.idGenerator.lengthLong);
+			if (options.idGenerator.lengthShort)
+				LibraryCommonUtility.setIdGeneratorLengthShort(options.idGenerator.lengthShort);
+		}
+	}
 
 	if (bootFiles && (bootFiles.length > 0)) {
 		let obj;

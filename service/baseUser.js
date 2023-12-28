@@ -2,7 +2,7 @@ import LibraryClientConstants from '@thzero/library_client/constants';
 
 import BaseUserService from '@thzero/library_client/service/baseUser';
 
-class VueBaseUserService extends BaseUserService {
+class SvelteBaseUserService extends BaseUserService {
 	constructor() {
 		super();
 
@@ -16,34 +16,34 @@ class VueBaseUserService extends BaseUserService {
 	}
 
 	async resetUser(correlationId) {
-		await this._serviceStore.dispatcher.user.resetUser(correlationId);
+		await this._serviceStore.store.user.dispatcher.resetUser(correlationId);
 	}
 
 	async setAuthCompleted(correlationId) {
-		await this._serviceStore.dispatcher.user.setAuthCompleted(correlationId, true);
+		await this._serviceStore.store.user.dispatcher.setAuthCompleted(correlationId, true);
 	}
 
 	async setClaims(correlationId, claims) {
-		await this._serviceStore.dispatcher.user.setClaims(correlationId, claims);
+		await this._serviceStore.store.user.dispatcher.setClaims(correlationId, claims);
 	}
 
 	async setLoggedIn(correlationId, value) {
-		await this._serviceStore.dispatcher.user.setLoggedIn(correlationId, value);
+		await this._serviceStore.store.user.dispatcher.setLoggedIn(correlationId, value);
 	}
 	
 	async setTokenResult(correlationId, tokenResult) {
-		await this._serviceStore.dispatcher.user.setTokenResult(correlationId, tokenResult);
+		await this._serviceStore.store.user.dispatcher.setTokenResult(correlationId, tokenResult);
 	}
 
 	async setUser(correlationId, user) {
-		await this._serviceStore.dispatcher.user.setUser(correlationId, user);
+		await this._serviceStore.store.user.dispatcher.setUser(correlationId, user);
 	}
 
 	get token() {
-		if (this._serviceStore.state.user) 
-			return this._serviceStore.state.user.token;
+		if (this._serviceStore.store.user) 
+			return this._serviceStore.store.user.token;
 		return null;
 	}
 }
 
-export default VueBaseUserService;
+export default SvelteBaseUserService;
