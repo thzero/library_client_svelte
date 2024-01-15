@@ -1,6 +1,6 @@
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
-import TranslateService from '@thzero/library_client/service/translate';
+import TranslateService from '@thzero/library_client/service/translate.js';
 
 class SvelteTranslateService extends TranslateService {
 	// eslint-disable-next-line

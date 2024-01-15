@@ -1,6 +1,6 @@
-import LibraryClientConstants from '@thzero/library_client/constants';
+import LibraryClientConstants from '@thzero/library_client/constants.js';
 
-import BaseUserService from '@thzero/library_client/service/baseUser';
+import BaseUserService from '@thzero/library_client/service/baseUser.js';
 
 class SvelteBaseUserService extends BaseUserService {
 	constructor() {

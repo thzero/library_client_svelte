@@ -1,11 +1,11 @@
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
-import RootServicesBaseBoot from '@thzero/library_client/boot/rootServices';
+import RootServicesBaseBoot from '@thzero/library_client/boot/rootServices.js';
 
-import eventService from '../service/event';
-import routerService from '../service/router';
-import storeService from '../service/store';
-import translateService from '../service/translate';
+import eventService from '../service/event.js';
+import routerService from '../service/router.js';
+import storeService from '../service/store.js';
+import translateService from '../service/translate.js';
 
 class SveleteRootServicesBaseBoot extends RootServicesBaseBoot {
 	_initializeInjector(framework, injector) {

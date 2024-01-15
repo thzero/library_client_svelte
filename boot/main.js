@@ -1,15 +1,14 @@
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
 // @ts-ignore
-import {} from '@thzero/library_common/utility/string';
+import {} from '@thzero/library_common/utility/string.js';
 
 // eslint-disable-next-line
 async function start(app, storeRequest, bootFiles, starter, options) {
 	let store = null;
 	if (storeRequest) {
 		try {
-			const temp = new storeRequest();
-			store = temp.initialize();
+			store = new storeRequest();
 		}
 		catch (err) {
 			console.log(err);
@@ -67,6 +66,9 @@ async function start(app, storeRequest, bootFiles, starter, options) {
 			}
 		}
 	}
+	
+	if (!app)
+		return;
 
 	if (!starter) {
 		if (app)

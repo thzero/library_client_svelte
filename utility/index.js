@@ -1,7 +1,7 @@
-import Constants from '../constants';
-import LibraryCommonConstants from '@thzero/library_common/constants';
+import Constants from '../constants.js';
+import LibraryCommonConstants from '@thzero/library_common/constants.js';
 
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
 class Utility {
 	static applyError(error, messageParams) {
