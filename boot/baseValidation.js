@@ -1,4 +1,4 @@
-import BaseBoot from '@thzero/library_client/boot/base';
+import BaseBoot from '@thzero/library_client/boot/base.js';
 
 class ValidateBaseBoot extends BaseBoot {
 	// eslint-disable-next-line

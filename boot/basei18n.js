@@ -1,10 +1,10 @@
 import { init, getLocaleFromNavigator, register, format, addMessages, unwrapFunctionStore } from 'svelte-i18n';
 
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
-import i18nBaseBoot from '@thzero/library_client/boot/basei18n';
+import i18nBaseBoot from '@thzero/library_client/boot/basei18n.js';
 
-import NotImplementedError from '@thzero/library_common/errors/notImplemented';
+import NotImplementedError from '@thzero/library_common/errors/notImplemented.js';
 
 class Sveltei18nBaseBoot extends i18nBaseBoot {
 	// eslint-disable-next-line

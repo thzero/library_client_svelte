@@ -1,6 +1,6 @@
 import mitt from 'mitt';
 
-import LibraryClientUtility from '@thzero/library_client/utility/index';
+import LibraryClientUtility from '@thzero/library_client/utility/index.js';
 
 const EventBus = mitt();
 
