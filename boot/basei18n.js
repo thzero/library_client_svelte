@@ -16,7 +16,7 @@ class Sveltei18nBaseBoot extends i18nBaseBoot {
 			initialLocale: getLocaleFromNavigator()
 		});
 		// LibraryClientUtility.$trans = { t: unwrapFunctionStore(format) };
-		LibraryClientUtility.$trans = { t: format };
+		LibraryClientUtility.$trans = { f: format, t: unwrapFunctionStore(format) };
 	}
 
 	_initMessages(register) {
