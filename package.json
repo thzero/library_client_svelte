@@ -1,10 +1,10 @@
 {
   "name": "@thzero/library_client_svelte",
-  "version": "0.18.10",
+  "version": "0.18.11",
   "version_major": 0,
   "version_minor": 18,
-  "version_patch": 10,
-  "version_date": "04/21/2026",
+  "version_patch": 11,
+  "version_date": "05/10/2026",
   "description": "An opinionated library of common functionality to bootstrap a Svelte based SPA application.",
   "author": "thZero",
   "author_url": "https://www.thzero.com",
@@ -27,7 +27,7 @@
     "@thzero/library_common": "^0.18",
     "mitt": "^3.0.1",
     "svelte-i18n": "^4.0.1",
-    "svelte-spa-router": "^5.0.1"
+    "svelte-spa-router": "^5.1.0"
   },
   "peerDependencies": {
     "svelte": "^4"
