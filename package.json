@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@thzero/library_client": "^0.18",
-    "@thzero/library_common": "^0.18",
+    "@thzero/library_common": "^0.19",
     "mitt": "^3.0.1",
     "svelte-i18n": "^4.0.1",
     "svelte-spa-router": "^5.1.1"
