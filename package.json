@@ -1,10 +1,10 @@
 {
   "name": "@thzero/library_client_svelte",
-  "version": "0.18.15",
+  "version": "0.18.16",
   "version_major": 0,
   "version_minor": 18,
-  "version_patch": 15,
-  "version_date": "07/20/2026",
+  "version_patch": 16,
+  "version_date": "10/03/2026",
   "description": "An opinionated library of common functionality to bootstrap a Svelte based SPA application.",
   "author": "thZero",
   "author_url": "https://www.thzero.com",
@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@thzero/library_client": "^0.18",
+    "@thzero/library_client": "^0.19",
     "@thzero/library_common": "^0.19",
     "mitt": "^3.0.1",
     "svelte-i18n": "^4.0.1",
